@@ -1,0 +1,30 @@
+{
+  "name": "html-cs-js-demo",
+  "version": "1.0.0",
+  "description": "This is the base code for an html+css+js demo non-assignment (extra credit).",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon -e js,css,html server.js --port=5000 --debug",
+    "start": "node server.js",
+    "demo": "nodemon -e js,css,html server.js --port=5000 --stat=demo"
+  },
+  "keywords": [
+    "node",
+    "html",
+    "css",
+    "js",
+    "browser",
+    "interface",
+    "client",
+    "express",
+    "server"
+  ],
+  "author": "@jdmar3",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "express": "^4.18.2",
+    "minimist": "^1.2.8",
+    "morgan": "^1.10.0"
+  }
+}

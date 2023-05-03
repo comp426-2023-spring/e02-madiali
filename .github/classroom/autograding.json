@@ -1,0 +1,94 @@
+{
+  "tests": [
+    {
+      "name": "Node version",
+      "setup": "",
+      "run": "node -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Validate HTML",
+      "setup": "",
+      "run": "echo \"This is a placeholder. This test will fail. Please do not email or create an issue about this. Test your HTML: https://validator.w3.org/\"",
+      "input": "",
+      "output": "Nope",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Validate CSS",
+      "setup": "",
+      "run": "echo \"This is a placeholder. This test will fail. Please do not email or create an issue about this. Test your CSS: https://jigsaw.w3.org/css-validator/\"",
+      "input": "",
+      "output": "Nope",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Front end being served",
+      "setup": "",
+      "run": "echo \"This is a placeholder. This test will fail. Please do not email or create an issue about this. Test your server to make sure you can access your interface at http://localhost:5000 when you run npm test.\"",
+      "input": "",
+      "output": "Nope",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Back end being served with working game endpoint",
+      "setup": "",
+      "run": "echo \"This is a placeholder. This test will fail. Please do not email or create an issue about this. Test your server to make sure you get a JSON response in your browser or with curl at http://localhost:5000/app/rps/play/ when you run npm test.\"",
+      "input": "",
+      "output": "Nope",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Screenshot interface",
+      "setup": "",
+      "run": "ls",
+      "input": "",
+      "output": "01-interface",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Screenshot results",
+      "setup": "",
+      "run": "ls",
+      "input": "",
+      "output": "02-result",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Interface run test",
+      "setup": "",
+      "run": "echo \"This is a really experimental test to see if we can make curl click a button in your interface and submit a default action. It's going to fail for right now. If I can't get it working, I'm just going to give you the points for it.\"",
+      "input": "",
+      "output": "Nope",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Information",
+      "setup": "",
+      "run": "echo \"I am still configuring and testing one-liner tests for the autograder to make sure that they actually function and catch as many edge and corner cases as possible. You should know by now how to tell if your code is working or not. And if you do not and you are relying on the autograder to tell you, then I can't really help you because I've been telling you not to do that exact thing since day one. So, good luck, I guess. ¯\\_(ツ)_/¯ - @jdmar3\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}

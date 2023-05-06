@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "Node version",
-      "setup": "",
+      "setup": "npm install",
       "run": "node -v",
       "input": "",
       "output": "",
@@ -33,12 +33,12 @@
     {
       "name": "Front end being served",
       "setup": "",
-      "run": "echo \"This is a placeholder. This test will fail. Please do not email or create an issue about this. Test your server to make sure you can access your interface at http://localhost:5000 when you run npm test.\"",
+      "run": "PORT=\"$(shuf -i 2000-65535 -n 1)\"; (timeout --signal=SIGINT 5 node server.js --port=$PORT; exit 0) & sleep 1s && curl -s http://localhost:${PORT} && sleep 5s",
       "input": "",
-      "output": "Nope",
+      "output": "script src=",
       "comparison": "included",
       "timeout": 10,
-      "points": null
+      "points": 50000
     },
     {
       "name": "Back end being served",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Interface run test",
-      "setup": "",
+      "setup": "#npm i -g puppeteer",
       "run": "echo \"This is a really experimental test to see if we can make curl click a button in your interface and submit a default action. It's going to fail for right now. If I can't get it working, I'm just going to give you the points for it.\"",
       "input": "",
       "output": "Nope",

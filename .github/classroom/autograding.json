@@ -12,23 +12,23 @@
     },
     {
       "name": "Validate HTML",
-      "setup": "",
-      "run": "echo \"This is a placeholder. This test will fail. Please do not email or create an issue about this. Test your HTML: https://validator.w3.org/\"",
+      "setup": "npm i -g html-validate",
+      "run": "html-validate ./public/*.html",
       "input": "",
-      "output": "Nope",
-      "comparison": "included",
+      "output": "",
+      "comparison": "exact",
       "timeout": 10,
-      "points": null
+      "points": 50000
     },
     {
       "name": "Validate CSS",
-      "setup": "",
-      "run": "echo \"This is a placeholder. This test will fail. Please do not email or create an issue about this. Test your CSS: https://jigsaw.w3.org/css-validator/\"",
+      "setup": "npm install -g css-validator",
+      "run": "css-validator ./public/*.css",
       "input": "",
-      "output": "Nope",
-      "comparison": "included",
+      "output": "",
+      "comparison": "exact",
       "timeout": 10,
-      "points": null
+      "points": 50000
     },
     {
       "name": "Front end being served",

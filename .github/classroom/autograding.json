@@ -53,22 +53,22 @@
     {
       "name": "Screenshot interface",
       "setup": "",
-      "run": "ls",
+      "run": "ls docs",
       "input": "",
       "output": "01-interface",
       "comparison": "included",
       "timeout": 10,
-      "points": null
+      "points": 25000
     },
     {
       "name": "Screenshot results",
       "setup": "",
-      "run": "ls",
+      "run": "ls docs",
       "input": "",
       "output": "02-result",
       "comparison": "included",
       "timeout": 10,
-      "points": null
+      "points": 25000
     },
     {
       "name": "Interface run test",

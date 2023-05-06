@@ -41,14 +41,14 @@
       "points": null
     },
     {
-      "name": "Back end being served with working game endpoint",
+      "name": "Back end being served",
       "setup": "",
-      "run": "echo \"This is a placeholder. This test will fail. Please do not email or create an issue about this. Test your server to make sure you get a JSON response in your browser or with curl at http://localhost:5000/app/rps/play/ when you run npm test.\"",
+      "run": "PORT=\"$(shuf -i 2000-65535 -n 1)\"; (timeout --signal=SIGINT 5 node server.js --port=$PORT; exit 0) & sleep 1s && curl -s http://localhost:${PORT}/app/ && sleep 5s",
       "input": "",
-      "output": "Nope",
+      "output": "200 OK",
       "comparison": "included",
       "timeout": 10,
-      "points": null
+      "points": 50000
     },
     {
       "name": "Screenshot interface",

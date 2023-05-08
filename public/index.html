@@ -28,16 +28,43 @@
             src="/img/spock.jpg">
         </header>
         <main>
-            <div class="index-rpsls">
-                <label class="r-label">R</label>
-                <label class="p-label">P</label>
-                <label class="s1-label">S</label>
-                <label class="l-label">L</label>
-                <label class="s2-label">S</label>
+            <dialog open>
+                <p id="resultsText">Results</p>
+                <form method="dialog">
+                  <button class="restart-button">Restart</button>
+                </form>
+              </dialog>
+            <div class="left-panel">
+                <div class="rpsls-label">
+                    <label class="r-label">R</label>
+                    <label class="p-label">P</label>
+                    <label class="s1-label">S</label>
+                    <label class="l-label">L</label>
+                    <label class="s2-label">S</label>
+                </div>
+                <div class="index-buttons">
+                    <button class="play-button">How to Play</button>
+                    <button class="play-button">Switch to RPS</button>
+                </div>
             </div>
-            <div class="index-buttons">
-                <button class="play-button">Play RPS</button>
-                <button class="play-button">Play RPSLS</button>
+            <div class="right-panel">
+                <div>
+                    <img class="rpsls-icon"
+                    src="/img/rock.jpg">
+                    <img class="rpsls-icon"
+                    src="/img/paper.jpg">
+                </div>
+                <div>
+                    <img class="rpsls-icon"
+                    src="/img/lizard.jpg">
+                    <img class="rpsls-icon"
+                    src="/img/scissors.jpg">
+                    <img class="rpsls-icon"
+                    src="/img/spock.jpg">
+                </div>
+                <div style="padding-top: 30px;">
+                    <button class="no-opponent-button">No Opponent</button>
+                </div>
             </div>
         </main>
         <footer>

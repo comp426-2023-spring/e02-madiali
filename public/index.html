@@ -28,14 +28,22 @@
             src="/img/spock.jpg">
         </header>
         <main>
-            <dialog open>
-                <p id="resultsText">Results</p>
+            <dialog class="inactive">
+                <h2>Results</h2>
+                <p><span id="player"><span></p>
+                <p><span id="opponent"><span></p>
+                <p><span id="results"><span></p>
                 <form method="dialog">
                   <button class="restart-button">Restart</button>
                 </form>
               </dialog>
             <div class="left-panel">
-                <div class="rpsls-label">
+                <div id="rpsTitle" class="rpsls-label inactive">
+                    <label class="r-label">R</label>
+                    <label class="p-label">P</label>
+                    <label class="s1-label">S</label>
+                </div>
+                <div id="rpslsTitle" class="rpsls-label active">
                     <label class="r-label">R</label>
                     <label class="p-label">P</label>
                     <label class="s1-label">S</label>
@@ -44,10 +52,23 @@
                 </div>
                 <div class="index-buttons">
                     <button class="play-button">How to Play</button>
-                    <button class="play-button">Switch to RPS</button>
+                    <button class="play-button" onclick="toggleRpsls()">Switch to RPS</button>
                 </div>
             </div>
-            <div class="right-panel">
+            <div id="rpsSelection" class="rps-icons inactive">
+                <div>
+                    <img class="rpsls-icon"
+                    src="/img/rock.jpg">
+                    <img class="rpsls-icon"
+                    src="/img/paper.jpg">
+                    <img class="rpsls-icon"
+                    src="/img/scissors.jpg">
+                </div>
+                <div style="padding-top: 30px;">
+                    <button class="no-opponent-button">No Opponent</button>
+                </div>
+            </div>
+            <div id="rpslsSelection" class="rpsls-icons active">
                 <div>
                     <img class="rpsls-icon"
                     src="/img/rock.jpg">

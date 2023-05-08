@@ -1,3 +1,11 @@
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
+
 body {
     min-height: 97vh;
     display: flex;
@@ -29,6 +37,8 @@ dialog {
     z-index: 1;
     text-align: center;
     border-color:#C4BAD6;
+    color: #225661;
+    font-family: monospace;
 }
 
 .border-img {
@@ -43,7 +53,14 @@ dialog {
     text-align: center;
 }
 
-.right-panel {
+.rpsls-icons {
+    min-width: 100vh;
+    text-align: center;
+    word-spacing: 50px;
+}
+
+.rps-icons {
+    padding-top: 100px;
     min-width: 100vh;
     text-align: center;
     word-spacing: 50px;

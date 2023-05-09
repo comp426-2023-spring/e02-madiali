@@ -3,7 +3,7 @@
     {
       "name": "Node version",
       "setup": "npm install",
-      "run": "node -v",
+      "run": "node -v && echo \"Node is working.\"",
       "input": "",
       "output": "",
       "comparison": "included",

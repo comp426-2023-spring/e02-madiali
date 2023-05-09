@@ -28,22 +28,47 @@
             src="/img/spock.jpg">
         </header>
         <main>
-            <dialog class="inactive">
+            <dialog id="resultsDialog" class="inactive">
                 <h2>Results</h2>
                 <p><span id="player"><span></p>
                 <p><span id="opponent"><span></p>
                 <p><span id="results"><span></p>
                 <form method="dialog">
-                  <button class="restart-button">Restart</button>
+                    <button class="dialog-button">Restart</button>
                 </form>
-              </dialog>
+            </dialog>
+            <dialog id="rulesDialogRps" class="inactive">
+                <h2>Rules for Rock Paper Scissors:</h2>
+                <p> - Scissors CUTS Paper <br>
+                    - Paper COVERS Rock <br>
+                    - Rock CRUSHES Scissors</p>
+                <form method="dialog">
+                    <button class="dialog-button" onclick="hideRules()">Back</button>
+                </form>
+            </dialog>
+            <dialog id="rulesDialogRpsls" class="inactive">
+                <h2>Rules for the Lizard-Spock Expansion of Rock Paper Scissors:</h2>
+                <p> - Scissors CUTS Paper <br>
+                    - Paper COVERS Rock <br>
+                    - Rock SMOOSHES Lizard <br>
+                    - Lizard POISONS Spock <br>
+                    - Spock SMASHES Scissors <br>
+                    - Scissors DECAPITATES Lizard <br>
+                    - Lizard EATS Paper <br>
+                    - Paper DISPROVES Spock <br>
+                    - Spock VAPORIZES Rock <br>
+                    - Rock CRUSHES Scissors</p>
+                <form method="dialog">
+                    <button class="dialog-button" onclick="hideRules()">Back</button>
+                </form>
+            </dialog>
             <div class="left-panel">
                 <div id="rpsTitle" class="rpsls-label inactive">
                     <label class="r-label">R</label>
                     <label class="p-label">P</label>
                     <label class="s1-label">S</label>
                 </div>
-                <div id="rpslsTitle" class="rpsls-label active">
+                <div id="rpslsTitle" class="rpsls-label">
                     <label class="r-label">R</label>
                     <label class="p-label">P</label>
                     <label class="s1-label">S</label>
@@ -51,7 +76,7 @@
                     <label class="s2-label">S</label>
                 </div>
                 <div class="index-buttons">
-                    <button class="play-button">How to Play</button>
+                    <button class="play-button" onclick="showRules()">How to Play</button>
                     <button id="toggleButton" class="play-button" onclick="toggleRpsls()">Switch to RPS</button>
                 </div>
             </div>
@@ -68,7 +93,7 @@
                     <button class="no-opponent-button">No Opponent</button>
                 </div>
             </div>
-            <div id="rpslsSelection" class="rpsls-icons active">
+            <div id="rpslsSelection" class="rpsls-icons">
                 <div>
                     <img class="rpsls-icon"
                     src="/img/rock.jpg">

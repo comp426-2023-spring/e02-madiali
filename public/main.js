@@ -2,10 +2,20 @@
 // check out the coin-server example from a previous COMP 426 semester.
 // https://github.com/jdmar3/coinserver
 
-let rpsEnabled = true;
+let rpslsEnabled = true;
+
+function hideRules() {
+    document.getElementById("rulesDialogRps").classList.add("inactive");
+    document.getElementById("rulesDialogRpsls").classList.add("inactive");
+}
 
 function showRules() {
-    
+    if (rpslsEnabled) {
+        document.getElementById("rulesDialogRpsls").classList.remove("inactive");
+    }
+    else {
+        document.getElementById("rulesDialogRps").classList.remove("inactive");
+    }
 }
 
 function toggleRpsls() {
@@ -15,29 +25,21 @@ function toggleRpsls() {
     const rpslsSelection = document.getElementById("rpslsSelection");
     const toggleButton = document.querySelector("#toggleButton");
 
-    if (rpsTitle.classList.contains("active")) {
-        rpsTitle.classList.remove("active");
-        rpsTitle.classList.add("inactive");
-        rpslsTitle.classList.remove("inactive");
-        rpslsTitle.classList.add("active");
-        rpsSelection.classList.remove("active");
-        rpsSelection.classList.add("inactive");
-        rpslsSelection.classList.remove("inactive");
-        rpslsSelection.classList.add("active");
-        toggleButton.textContent = "Switch to RPS";
-    }
-
-    else {
-        rpsTitle.classList.add("active");
+    if (rpslsEnabled) {
         rpsTitle.classList.remove("inactive");
         rpslsTitle.classList.add("inactive");
-        rpslsTitle.classList.remove("active");
-        rpsSelection.classList.add("active");
         rpsSelection.classList.remove("inactive");
         rpslsSelection.classList.add("inactive");
-        rpslsSelection.classList.remove("active");
         toggleButton.textContent = "Switch to RPSLS";
     }
 
-    rpsEnabled = !rpsEnabled;
+    else {
+        rpsTitle.classList.add("inactive");
+        rpslsTitle.classList.remove("inactive");
+        rpsSelection.classList.add("inactive");
+        rpslsSelection.classList.remove("inactive");
+        toggleButton.textContent = "Switch to RPS";
+    }
+
+    rpslsEnabled = !rpslsEnabled;
 }

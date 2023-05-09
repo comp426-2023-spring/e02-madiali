@@ -130,8 +130,13 @@ dialog {
     border-width: 5px;
 }
 
-form {
+.dialog-button {
+    align-self: center;
     margin-top: auto;
+}
+
+.no-opponent-div {
+    padding-top: 30px;
 }
 
 .rpsls-icon {

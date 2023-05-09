@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
     <head>
         <title>RPSLS</title>
         <script src="main.js"></script>
@@ -7,62 +7,82 @@
     <body>
         <header>
             <img class="border-img"
-            src="/img/rock.jpg">
+            src="/img/rock.jpg"
+            alt="rock icon">
             <img class="border-img"
-            src="/img/paper.jpg">
+            src="/img/paper.jpg"
+            alt="paper icon">
             <img class="border-img"
-            src="/img/scissors.jpg">
+            src="/img/scissors.jpg"
+            alt="scissors icon">
             <img class="border-img"
-            src="/img/lizard.jpg">
+            src="/img/lizard.jpg"
+            alt="lizard icon">
             <img class="border-img"
-            src="/img/spock.jpg">
+            src="/img/spock.jpg"
+            alt="spock icon">
             <img class="border-img"
-            src="/img/rock.jpg">
+            src="/img/rock.jpg"
+            alt="rock icon">
             <img class="border-img"
-            src="/img/paper.jpg">
+            src="/img/paper.jpg"
+            alt="paper icon">
             <img class="border-img"
-            src="/img/scissors.jpg">
+            src="/img/scissors.jpg"
+            alt="scissors icon">
             <img class="border-img"
-            src="/img/lizard.jpg">
+            src="/img/lizard.jpg"
+            alt="lizard icon">
             <img class="border-img"
-            src="/img/spock.jpg">
+            src="/img/spock.jpg"
+            alt="spock icon">
             <img class="border-img"
-            src="/img/rock.jpg">
+            src="/img/rock.jpg"
+            alt="rock icon">
             <img class="border-img"
-            src="/img/paper.jpg">
+            src="/img/paper.jpg"
+            alt="paper icon">
             <img class="border-img"
-            src="/img/scissors.jpg">
+            src="/img/scissors.jpg"
+            alt="scissors icon">
             <img class="border-img"
-            src="/img/lizard.jpg">
+            src="/img/lizard.jpg"
+            alt="lizard icon">
             <img class="border-img"
-            src="/img/spock.jpg">
+            src="/img/spock.jpg"
+            alt="spock icon"> 
             <img class="border-img"
-            src="/img/rock.jpg">
+            src="/img/rock.jpg"
+            alt="rock icon">
             <img class="border-img"
-            src="/img/paper.jpg">
+            src="/img/paper.jpg"
+            alt="paper icon">
             <img class="border-img"
-            src="/img/scissors.jpg">
+            src="/img/scissors.jpg"
+            alt="scissors icon">
             <img class="border-img"
-            src="/img/lizard.jpg">
+            src="/img/lizard.jpg"
+            alt="lizard icon">
             <img class="border-img"
-            src="/img/spock.jpg"> 
+            src="/img/spock.jpg"
+            alt="spock icon">
         </header>
         <main>
             <dialog id="resultsDialog" class="inactive">
                 <h2>Results</h2>
                 <p id="gameResult"></p>
-                <form method="dialog">
-                    <button class="dialog-button" onclick="hideResults()">Restart</button>
-                </form>
+                <div class="dialog-button">
+                    <button type="button" class="dialog-button" onclick="hideResults()">Restart</button>
+                </div>
             </dialog>
             <dialog id="rulesDialogRps" class="inactive">
                 <h2>Rules for Rock Paper Scissors:</h2>
                 <p> - Scissors CUTS Paper <br>
                     - Paper COVERS Rock <br>
                     - Rock CRUSHES Scissors</p>
-                <form method="dialog">
-                    <button class="dialog-button" onclick="hideRules()">Back</button>
-                </form>
+                <div class="dialog-button">
+                    <button type="button" class="dialog-button" onclick="hideRules()">Back</button>
+                </div>
             </dialog>
             <dialog id="rulesDialogRpsls" class="inactive">
                 <h2>Rules for the Lizard-Spock Expansion of Rock Paper Scissors:</h2>
@@ -77,7 +97,7 @@
                     - Spock VAPORIZES Rock <br>
                     - Rock CRUSHES Scissors</p>
                 <form method="dialog">
-                    <button class="dialog-button" onclick="hideRules()">Back</button>
+                    <button type="button" class="dialog-button" onclick="hideRules()">Back</button>
                 </form>
             </dialog>
             <div class="left-panel">
@@ -94,92 +114,120 @@
                     <label class="s2-label">S</label>
                 </div>
                 <div class="index-buttons">
-                    <button class="play-button" onclick="showRules()">How to Play</button>
-                    <button id="toggleButton" class="play-button" onclick="toggleRpsls()">Switch to RPS</button>
+                    <button type="button" class="play-button" onclick="showRules()">How to Play</button>
+                    <button type="button" id="toggleButton" class="play-button" onclick="toggleRpsls()">Switch to RPS</button>
                 </div>
             </div>
             <div id="rpsSelection" class="rps-icons inactive">
                 <div>
                     <img class="rpsls-icon"
                     src="/img/rock.jpg"
+                    alt="rock button"
                     onclick="playOpponent('rock')">
                     <img class="rpsls-icon"
                     src="/img/paper.jpg"
+                    alt="paper button"
                     onclick="playOpponent('paper')">
                     <img class="rpsls-icon"
                     src="/img/scissors.jpg"
+                    alt="scissors button"
                     onclick="playOpponent('scissors')">
                 </div>
-                <div style="padding-top: 30px;">
-                    <button class="no-opponent-button" onclick="playNoOpponent()">No Opponent</button>
+                <div class="no-opponent-div">
+                    <button type="button" class="no-opponent-button" onclick="playNoOpponent()">No Opponent</button>
                 </div>
             </div>
             <div id="rpslsSelection" class="rpsls-icons">
                 <div>
                     <img class="rpsls-icon"
                     src="/img/rock.jpg"
+                    alt="rock button"
                     onclick="playOpponent('rock')">
                     <img class="rpsls-icon"
                     src="/img/paper.jpg"
+                    alt="paper button"
                     onclick="playOponent('paper')">
                 </div>
                 <div>
                     <img class="rpsls-icon"
                     src="/img/lizard.jpg"
+                    alt="lizard button"
                     onclick="playOpponent('lizard')">
                     <img class="rpsls-icon"
                     src="/img/scissors.jpg"
+                    alt="scissors button"
                     onclick="playOpponent('scissors')">
                     <img class="rpsls-icon"
                     src="/img/spock.jpg"
+                    alt="spock button"
                     onclick="playOpponent('spock')">
                 </div>
-                <div style="padding-top: 30px;">
-                    <button class="no-opponent-button" onclick="playNoOpponent()">No Opponent</button>
+                <div class="no-opponent-div">
+                    <button type="button" class="no-opponent-button" onclick="playNoOpponent()">No Opponent</button>
                 </div>
             </div>
         </main>
         <footer>
             <img class="border-img"
-            src="/img/rock.jpg">
+            src="/img/rock.jpg"
+            alt="rock icon">
             <img class="border-img"
-            src="/img/paper.jpg">
+            src="/img/paper.jpg"
+            alt="paper icon">
             <img class="border-img"
-            src="/img/scissors.jpg">
+            src="/img/scissors.jpg"
+            alt="scissors icon">
             <img class="border-img"
-            src="/img/lizard.jpg">
+            src="/img/lizard.jpg"
+            alt="lizard icon">
             <img class="border-img"
-            src="/img/spock.jpg">
+            src="/img/spock.jpg"
+            alt="spock icon">
             <img class="border-img"
-            src="/img/rock.jpg">
+            src="/img/rock.jpg"
+            alt="rock icon">
             <img class="border-img"
-            src="/img/paper.jpg">
+            src="/img/paper.jpg"
+            alt="paper icon">
             <img class="border-img"
-            src="/img/scissors.jpg">
+            src="/img/scissors.jpg"
+            alt="scissors icon">
             <img class="border-img"
-            src="/img/lizard.jpg">
+            src="/img/lizard.jpg"
+            alt="lizard icon">
             <img class="border-img"
-            src="/img/spock.jpg">
+            src="/img/spock.jpg"
+            alt="spock icon">
             <img class="border-img"
-            src="/img/rock.jpg">
+            src="/img/rock.jpg"
+            alt="rock icon">
             <img class="border-img"
-            src="/img/paper.jpg">
+            src="/img/paper.jpg"
+            alt="paper icon">
             <img class="border-img"
-            src="/img/scissors.jpg">
+            src="/img/scissors.jpg"
+            alt="scissors icon">
             <img class="border-img"
-            src="/img/lizard.jpg">
+            src="/img/lizard.jpg"
+            alt="lizard icon">
             <img class="border-img"
-            src="/img/spock.jpg">
+            src="/img/spock.jpg"
+            alt="spock icon"> 
             <img class="border-img"
-            src="/img/rock.jpg">
+            src="/img/rock.jpg"
+            alt="rock icon">
             <img class="border-img"
-            src="/img/paper.jpg">
+            src="/img/paper.jpg"
+            alt="paper icon">
             <img class="border-img"
-            src="/img/scissors.jpg">
+            src="/img/scissors.jpg"
+            alt="scissors icon">
             <img class="border-img"
-            src="/img/lizard.jpg">
+            src="/img/lizard.jpg"
+            alt="lizard icon">
             <img class="border-img"
-            src="/img/spock.jpg"> 
+            src="/img/spock.jpg"
+            alt="spock icon">
         </footer>
     </body>
 </html>

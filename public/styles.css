@@ -102,6 +102,7 @@ dialog {
     color: white;
     border-radius: 16px;
     border-color: #C4BAD6;
+    filter: opacity(75%);
 }
 
 .no-opponent-button {

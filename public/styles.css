@@ -38,9 +38,9 @@ dialog {
 }
 
 .border-img {
-    width: 70px;
-    padding-left: 25px;
-    padding-right: 25px;
+    width: 35px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .left-panel {
@@ -50,6 +50,7 @@ dialog {
 }
 
 .rpsls-icons {
+    padding-top: 25px;
     min-width: 100vh;
     text-align: center;
     word-spacing: 50px;
@@ -63,6 +64,7 @@ dialog {
 }
 
 .rpsls-label {
+    padding-top: 20px;
     font-size: 150px;
 }
 

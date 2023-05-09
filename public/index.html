@@ -50,9 +50,7 @@
         <main>
             <dialog id="resultsDialog" class="inactive">
                 <h2>Results</h2>
-                <p id="playerResult">You: </p>
-                <p id="opponentResult">Opponent: </p>
-                <p id="gameResult">Result: </p>
+                <p id="gameResult"></p>
                 <form method="dialog">
                     <button class="dialog-button" onclick="hideResults()">Restart</button>
                 </form>
@@ -104,33 +102,40 @@
                 <div>
                     <img class="rpsls-icon"
                     src="/img/rock.jpg"
-                    onclick="showResults()">
+                    onclick="playOpponent('rock')">
                     <img class="rpsls-icon"
-                    src="/img/paper.jpg">
+                    src="/img/paper.jpg"
+                    onclick="playOpponent('paper')">
                     <img class="rpsls-icon"
-                    src="/img/scissors.jpg">
+                    src="/img/scissors.jpg"
+                    onclick="playOpponent('scissors')">
                 </div>
                 <div style="padding-top: 30px;">
-                    <button class="no-opponent-button">No Opponent</button>
+                    <button class="no-opponent-button" onclick="playNoOpponent()">No Opponent</button>
                 </div>
             </div>
             <div id="rpslsSelection" class="rpsls-icons">
                 <div>
                     <img class="rpsls-icon"
-                    src="/img/rock.jpg">
+                    src="/img/rock.jpg"
+                    onclick="playOpponent('rock')">
                     <img class="rpsls-icon"
-                    src="/img/paper.jpg">
+                    src="/img/paper.jpg"
+                    onclick="playOponent('paper')">
                 </div>
                 <div>
                     <img class="rpsls-icon"
-                    src="/img/lizard.jpg">
+                    src="/img/lizard.jpg"
+                    onclick="playOpponent('lizard')">
                     <img class="rpsls-icon"
-                    src="/img/scissors.jpg">
+                    src="/img/scissors.jpg"
+                    onclick="playOpponent('scissors')">
                     <img class="rpsls-icon"
-                    src="/img/spock.jpg">
+                    src="/img/spock.jpg"
+                    onclick="playOpponent('spock')">
                 </div>
                 <div style="padding-top: 30px;">
-                    <button class="no-opponent-button">No Opponent</button>
+                    <button class="no-opponent-button" onclick="playNoOpponent()">No Opponent</button>
                 </div>
             </div>
         </main>

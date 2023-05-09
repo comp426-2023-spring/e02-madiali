@@ -2,16 +2,66 @@
 // check out the coin-server example from a previous COMP 426 semester.
 // https://github.com/jdmar3/coinserver
 
-import express from 'express';
-import minimist from 'minimist';
-import { rps, rpsls } from './lib/rpsls.js';
-
-const app = express();
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
-app.use(express.static('./public'))
-
 let rpslsEnabled = true;
+
+async function playOpponent(shot) {
+    var endpoint = null;
+    if (rpslsEnabled) {
+        endpoint = `app/rpsls/play/${shot}`;
+    }
+    else {
+        endpoint = `app/rps/play/${shot}`
+    }
+    const url = document.baseURI+endpoint
+    await fetch(url)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(result) {
+            document.getElementById("gameResult").innerHTML =
+                `You: ${result.player} <br> <br>
+                Opponent: ${result.opponent} <br> <br>
+                Result: ${result.result}`;
+        });
+    document.getElementById("resultsDialog").classList.remove("inactive");
+};
+
+async function playNoOpponent() {
+    var endpoint = null;
+    if (rpslsEnabled) {
+        endpoint = `app/rpsls`;
+    }
+    else {
+        endpoint = `app/rps`
+    }
+    const url = document.baseURI+endpoint
+    await fetch(url)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(result) {
+            console.log(result);
+            document.getElementById("gameResult").innerHTML =
+                `<br> <br> ${result.player}`;
+        });
+    document.getElementById("resultsDialog").classList.remove("inactive");
+};
+
+async function playRps(shot) {
+    const endpoint = `app/rps/play/${shot}`
+    const url = document.baseURI+endpoint
+    await fetch(url)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(result) {
+            console.log(result);
+            document.getElementById("playerResult").innerHTML = `You: ${result.player}`;
+            document.getElementById("opponentResult").innerHTML = `Opponent: ${result.opponent}`;
+            document.getElementById("gameResult").innerHTML = `Result: ${result.result}`;
+        });
+    document.getElementById("resultsDialog").classList.remove("inactive");
+};
 
 function showResults() {
     document.getElementById("resultsDialog").classList.remove("inactive");
@@ -60,65 +110,3 @@ function toggleRpsls() {
 
     rpslsEnabled = !rpslsEnabled;
 }
-
-// async function playRpslsRock() {
-//     const endpoint = "app/rpsls/rock"
-//     const url = document.baseURI+endpoint
-//     await fetch(url)
-//         .then(function(response) {
-//             return response.json();
-//         })
-// // This processes the JSON into DOM calls that replace the existing corresponding elements in index.html 
-//         .then(function(result) {
-//             console.log(result);
-//             document.getElementById("result").innerHTML = result.flip;
-//             document.getElementById("quarter").setAttribute("src", "assets/img/"+result.flip+".png");
-//         });
-//     };
-
-// var argv = minimist(process.argv.slice(2));
-// const PORT = argv.port ? argv.port : 5000;
-
-// app.get('/app', (req, res) => {
-//     res.send('200 OK');
-// })
-
-// app.get('/app/rps', (req, res) => {
-//     res.send(rps());
-// })
-
-// app.get('/app/rpsls', (req, res) => {
-//     res.send(rpsls());
-// })
-
-// app.get('/app/rps/play', (req, res) => {
-//     res.send(rps(req.query.shot));
-// })
-
-// app.get('/app/rpsls/play', (req, res) => {
-//     res.send(rpsls(req.query.shot));
-// })
-
-// app.post('/app/rps/play', (req, res) => {
-//     res.send(rps(req.body.shot));
-// })
-
-// app.post('/app/rpsls/play', (req, res) => {
-//     res.send(rpsls(req.body.shot));
-// })
-
-// app.get('/app/rps/play/:shot', (req, res) => {
-//     res.send(rps(req.params.shot));
-// })
-
-// app.get('/app/rpsls/play/:shot', (req, res) => {
-//     res.send(rpsls(req.params.shot));
-// })
-
-// app.get('*', (req, res) => {
-//     res.send('404 NOT FOUND');
-// })
-
-// app.listen(PORT, (err) => {
-//     if (err) console.log(err);
-// });

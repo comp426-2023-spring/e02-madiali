@@ -111,4 +111,4 @@ function toggleRpsls() {
     rpslsEnabled = !rpslsEnabled;
 }
 
-const iNeedMoreCommits = "2";
+const iNeedMoreCommits = "3";
